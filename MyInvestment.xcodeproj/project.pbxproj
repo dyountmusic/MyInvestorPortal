@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		EA2805CC2202A11F00540216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2805CB2202A11F00540216 /* AppDelegate.swift */; };
-		EA2805CE2202A11F00540216 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2805CD2202A11F00540216 /* ViewController.swift */; };
+		EA2805CE2202A11F00540216 /* InvestmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2805CD2202A11F00540216 /* InvestmentsViewController.swift */; };
 		EA2805D12202A11F00540216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2805CF2202A11F00540216 /* Main.storyboard */; };
 		EA2805D32202A12000540216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA2805D22202A12000540216 /* Assets.xcassets */; };
 		EA2805D62202A12000540216 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2805D42202A12000540216 /* LaunchScreen.storyboard */; };
+		EA2805DE2202A15400540216 /* InvestmentInformationDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2805DD2202A15400540216 /* InvestmentInformationDownloadService.swift */; };
+		EA2805E32202A1D700540216 /* InvestmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2805E22202A1D700540216 /* InvestmentModel.swift */; };
+		EA2805E52202A2E800540216 /* URLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2805E42202A2E800540216 /* URLModel.swift */; };
+		EA2805E72202A8A000540216 /* InvestmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2805E62202A8A000540216 /* InvestmentTableViewCell.swift */; };
+		EA2805E92202AC4C00540216 /* InvestmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2805E82202AC4C00540216 /* InvestmentDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA2805C82202A11F00540216 /* MyInvestment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyInvestment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2805CB2202A11F00540216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA2805CD2202A11F00540216 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA2805CD2202A11F00540216 /* InvestmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsViewController.swift; sourceTree = "<group>"; };
 		EA2805D02202A11F00540216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA2805D22202A12000540216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA2805D52202A12000540216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA2805D72202A12000540216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA2805DD2202A15400540216 /* InvestmentInformationDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentInformationDownloadService.swift; sourceTree = "<group>"; };
+		EA2805E22202A1D700540216 /* InvestmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentModel.swift; sourceTree = "<group>"; };
+		EA2805E42202A2E800540216 /* URLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLModel.swift; sourceTree = "<group>"; };
+		EA2805E62202A8A000540216 /* InvestmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentTableViewCell.swift; sourceTree = "<group>"; };
+		EA2805E82202AC4C00540216 /* InvestmentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +65,58 @@
 			isa = PBXGroup;
 			children = (
 				EA2805CB2202A11F00540216 /* AppDelegate.swift */,
-				EA2805CD2202A11F00540216 /* ViewController.swift */,
+				EA2805E12202A1C900540216 /* Model Layer */,
+				EA2805E02202A1C000540216 /* Controller Layer */,
 				EA2805CF2202A11F00540216 /* Main.storyboard */,
 				EA2805D22202A12000540216 /* Assets.xcassets */,
 				EA2805D42202A12000540216 /* LaunchScreen.storyboard */,
 				EA2805D72202A12000540216 /* Info.plist */,
 			);
 			path = MyInvestment;
+			sourceTree = "<group>";
+		};
+		EA2805DF2202A1AF00540216 /* Download Services */ = {
+			isa = PBXGroup;
+			children = (
+				EA2805DD2202A15400540216 /* InvestmentInformationDownloadService.swift */,
+			);
+			path = "Download Services";
+			sourceTree = "<group>";
+		};
+		EA2805E02202A1C000540216 /* Controller Layer */ = {
+			isa = PBXGroup;
+			children = (
+				EA2805EA2202B60700540216 /* View Controllers */,
+				EA2805DF2202A1AF00540216 /* Download Services */,
+			);
+			path = "Controller Layer";
+			sourceTree = "<group>";
+		};
+		EA2805E12202A1C900540216 /* Model Layer */ = {
+			isa = PBXGroup;
+			children = (
+				EA2805E22202A1D700540216 /* InvestmentModel.swift */,
+				EA2805E42202A2E800540216 /* URLModel.swift */,
+			);
+			path = "Model Layer";
+			sourceTree = "<group>";
+		};
+		EA2805EA2202B60700540216 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA2805EB2202B62100540216 /* Cell Controllers */,
+				EA2805CD2202A11F00540216 /* InvestmentsViewController.swift */,
+				EA2805E82202AC4C00540216 /* InvestmentDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EA2805EB2202B62100540216 /* Cell Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA2805E62202A8A000540216 /* InvestmentTableViewCell.swift */,
+			);
+			path = "Cell Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA2805CE2202A11F00540216 /* ViewController.swift in Sources */,
+				EA2805CE2202A11F00540216 /* InvestmentsViewController.swift in Sources */,
 				EA2805CC2202A11F00540216 /* AppDelegate.swift in Sources */,
+				EA2805E32202A1D700540216 /* InvestmentModel.swift in Sources */,
+				EA2805E92202AC4C00540216 /* InvestmentDetailViewController.swift in Sources */,
+				EA2805E52202A2E800540216 /* URLModel.swift in Sources */,
+				EA2805E72202A8A000540216 /* InvestmentTableViewCell.swift in Sources */,
+				EA2805DE2202A15400540216 /* InvestmentInformationDownloadService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
